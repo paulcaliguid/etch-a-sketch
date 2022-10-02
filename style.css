@@ -4,11 +4,12 @@ body{
     align-items: center;
     gap: 20px;
 }
-.container-div{
+.div-container-div{
     width: 90vh;
     height: 90vh;
     border: 2px solid gold;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
