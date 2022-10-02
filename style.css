@@ -1,0 +1,14 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.container-div{
+    width: 90vh;
+    height: 90vh;
+    border: 2px solid gold;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
