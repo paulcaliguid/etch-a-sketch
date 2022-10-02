@@ -14,7 +14,10 @@ let buttonToSetGrids = document.querySelector('.setGridNumButton');
 buttonToSetGrids.addEventListener('click', setGrid);
 
 function setGrid(e) {
-    numGridPerSide = prompt("Enter number of square in a side");
+    while (!Number.isInteger(numGridPerSide) || numGridPerSide < 1 || numGridPerSide > 100) { 
+        numGridPerSide = prompt("Enter number of square in a side");
+        numGridPerSide = parseFloat(numGridPerSide);
+    }
     numGridOverall = numGridPerSide * numGridPerSide;
     gridWidth = (parseInt(containerDivWidth, 10) / numGridPerSide) - 2;
     divContainerDiv.innerHTML = '';
@@ -34,6 +37,7 @@ function createGrids() {
 
         divContainerDiv.appendChild(gridDiv);
     }
+    numGridPerSide = -1;
 }
 
 let colorToChange = false; //initial
