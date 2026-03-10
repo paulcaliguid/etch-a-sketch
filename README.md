@@ -2,6 +2,9 @@
 
 A small browser-based version of the classic Etch A Sketch toy. A grid of square cells lets you draw by clicking and dragging the mouse.
 
+## Live Demo
+- GitHub Pages: https://your-github-username.github.io/etch-a-sketch/
+
 ## Features
 - 16×16 grid on load (up to 100×100 via the **Change number of grids** button)
 - Random color for the first stroke on each drag, which darkens with each move
