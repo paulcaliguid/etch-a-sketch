@@ -4,12 +4,92 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etch-a-Sketch</title>
+    <title>Etch-a-Sketch Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
-<body onmousedown="return false"    >
-    <div class="div-container-div"></div>
-    <button class="setGridNumButton">Change number of grids</button>
+<body>
+    <main class="app-shell">
+        <section class="intro">
+            <p class="eyebrow">Playful Drawing Board</p>
+            <h1>Etch-a-Sketch Studio</h1>
+            <p class="subtitle">
+                A brighter, more tactile sketchpad with cleaner controls, a toy-inspired frame,
+                and color-drift strokes that feel more alive.
+            </p>
+        </section>
+
+        <section class="workspace">
+            <aside class="control-panel" aria-label="Sketch controls">
+                <div class="control-card">
+                    <p class="card-label">Grid Density</p>
+                    <div class="slider-header">
+                        <strong class="grid-size-value" aria-live="polite">16 x 16</strong>
+                        <span class="cell-count">256 cells</span>
+                    </div>
+                    <input
+                        class="grid-slider"
+                        type="range"
+                        min="8"
+                        max="64"
+                        step="4"
+                        value="16"
+                        aria-label="Grid density"
+                    >
+                    <button class="primary-button apply-grid-button" type="button">Build 16 x 16 Grid</button>
+                </div>
+
+                <div class="control-card">
+                    <p class="card-label">Color Mood</p>
+                    <div class="palette-meta">
+                        <strong class="palette-name">Sunset Fade</strong>
+                        <div class="palette-swatches" aria-hidden="true">
+                            <span class="swatch swatch-one"></span>
+                            <span class="swatch swatch-two"></span>
+                            <span class="swatch swatch-three"></span>
+                        </div>
+                    </div>
+                    <p class="helper-text">
+                        Each new stroke starts vivid and deepens as you drag, giving the board a
+                        layered neon-chalk feel.
+                    </p>
+                    <div class="button-row">
+                        <button class="secondary-button shuffle-palette-button" type="button">Shuffle Palette</button>
+                        <button class="secondary-button clear-board-button" type="button">Clear Board</button>
+                    </div>
+                </div>
+
+                <div class="tip-card">
+                    <span class="tip-badge">Sketch Tip</span>
+                    <p>Click or tap, then drag across the screen. Release to begin a fresh fade on the next stroke.</p>
+                </div>
+            </aside>
+
+            <section class="sketch-stage">
+                <div class="toy-frame">
+                    <div class="toy-header">
+                        <span class="toy-badge">Palette: Sunset Fade</span>
+                        <span class="screen-hint">256 pixels ready</span>
+                    </div>
+
+                    <div class="screen-shell">
+                        <div class="div-container-div sketch-board" role="grid" aria-label="Etch-a-Sketch board"></div>
+                    </div>
+
+                    <div class="toy-footer">
+                        <div class="knob" aria-hidden="true"></div>
+                        <div class="brand-plate">
+                            <span>ETCH A SKETCH</span>
+                            <small>studio edition</small>
+                        </div>
+                        <div class="knob" aria-hidden="true"></div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
 </body>
 </html>
