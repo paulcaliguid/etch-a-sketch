@@ -17,8 +17,8 @@
             <p class="eyebrow">Playful Drawing Board</p>
             <h1>Etch-a-Sketch Studio</h1>
             <p class="subtitle">
-                A brighter, more tactile sketchpad with cleaner controls, a toy-inspired frame,
-                and color-drift strokes that feel more alive.
+                A brighter, more tactile sketchpad with curated brush personalities, smoother trails,
+                and a toy-like reset that finally feels worthy of the frame.
             </p>
         </section>
 
@@ -43,9 +43,35 @@
                 </div>
 
                 <div class="control-card">
+                    <p class="card-label">Stroke Mode</p>
+                    <div class="mode-grid" role="group" aria-label="Stroke modes">
+                        <button class="mode-chip is-active" type="button" data-mode="orbit" aria-pressed="true">
+                            <span class="mode-name">Orbit</span>
+                            <span class="mode-flavor">Ribbon drift</span>
+                        </button>
+                        <button class="mode-chip" type="button" data-mode="heatwave" aria-pressed="false">
+                            <span class="mode-name">Heatwave</span>
+                            <span class="mode-flavor">Molten trail</span>
+                        </button>
+                        <button class="mode-chip" type="button" data-mode="aurora" aria-pressed="false">
+                            <span class="mode-name">Aurora</span>
+                            <span class="mode-flavor">Cool shimmer</span>
+                        </button>
+                        <button class="mode-chip" type="button" data-mode="confetti" aria-pressed="false">
+                            <span class="mode-name">Confetti</span>
+                            <span class="mode-flavor">Poster pops</span>
+                        </button>
+                    </div>
+                    <p class="helper-text mode-description">
+                        Orbit glides through neighboring hues like a glowing ribbon, staying playful
+                        without getting chaotic.
+                    </p>
+                </div>
+
+                <div class="control-card">
                     <p class="card-label">Color Mood</p>
                     <div class="palette-meta">
-                        <strong class="palette-name">Sunset Fade</strong>
+                        <strong class="palette-name">Sunset Ember</strong>
                         <div class="palette-swatches" aria-hidden="true">
                             <span class="swatch swatch-one"></span>
                             <span class="swatch swatch-two"></span>
@@ -53,26 +79,40 @@
                         </div>
                     </div>
                     <p class="helper-text">
-                        Each new stroke starts vivid and deepens as you drag, giving the board a
-                        layered neon-chalk feel.
+                        Shuffle the palette to repaint the next stroke family with a fresh atmosphere,
+                        from warm ember tones to neon arcade blues.
                     </p>
                     <div class="button-row">
                         <button class="secondary-button shuffle-palette-button" type="button">Shuffle Palette</button>
-                        <button class="secondary-button clear-board-button" type="button">Clear Board</button>
+                        <button class="secondary-button clear-board-button" type="button">Shake To Erase</button>
                     </div>
+                    <button class="secondary-button replay-sketch-button replay-button" type="button" disabled>Replay Last Sketch</button>
                 </div>
 
                 <div class="tip-card">
                     <span class="tip-badge">Sketch Tip</span>
-                    <p>Click or tap, then drag across the screen. Release to begin a fresh fade on the next stroke.</p>
+                    <p class="tip-copy">Click or tap, then drag across the screen. Release to begin a fresh orbit trail.</p>
+                    <p class="shortcut-line">
+                        <span class="shortcut-pill">1-4</span>
+                        Swap modes
+                        <span class="shortcut-pill">R</span>
+                        Shuffle palette
+                        <span class="shortcut-pill">C</span>
+                        Shake reset
+                        <span class="shortcut-pill">P</span>
+                        Replay
+                    </p>
                 </div>
             </aside>
 
             <section class="sketch-stage">
                 <div class="toy-frame">
                     <div class="toy-header">
-                        <span class="toy-badge">Palette: Sunset Fade</span>
-                        <span class="screen-hint">256 pixels ready</span>
+                        <span class="toy-badge">Palette: Sunset Ember</span>
+                        <div class="header-stack">
+                            <span class="mode-badge">Mode: Orbit</span>
+                            <span class="screen-hint">256 pixels ready</span>
+                        </div>
                     </div>
 
                     <div class="screen-shell">
@@ -80,12 +120,12 @@
                     </div>
 
                     <div class="toy-footer">
-                        <div class="knob" aria-hidden="true"></div>
+                        <div class="knob knob-left" aria-hidden="true"></div>
                         <div class="brand-plate">
                             <span>ETCH A SKETCH</span>
                             <small>studio edition</small>
                         </div>
-                        <div class="knob" aria-hidden="true"></div>
+                        <div class="knob knob-right" aria-hidden="true"></div>
                     </div>
                 </div>
             </section>

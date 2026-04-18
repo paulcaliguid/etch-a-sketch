@@ -1,23 +1,42 @@
-# Etch-a-Sketch
+# Etch-a-Sketch Studio
 
-A small browser-based version of the classic Etch A Sketch toy. A grid of square cells lets you draw by clicking and dragging the mouse.
+A polished browser-based take on the classic Etch A Sketch toy, rebuilt as a playful drawing studio with animated controls, multiple brush personalities, palette shuffling, sketch replay, and a toy-like shake-to-erase reset.
 
 ## Live Demo
 - GitHub Pages: https://paulcaliguid.github.io/etch-a-sketch/
 
-## Features
-- 16×16 grid on load (up to 100×100 via the **Change number of grids** button)
-- Random color for the first stroke on each drag, which darkens with each move
-- No external libraries – just HTML, CSS and vanilla JavaScript
+## Highlights
+- Responsive retro-inspired interface with a framed sketch board and control panel
+- Adjustable grid sizes from `8 x 8` up to `64 x 64`
+- Four drawing modes: `Orbit`, `Heatwave`, `Aurora`, and `Confetti`
+- Eleven curated color palettes that can be shuffled at any time
+- Smooth drag interpolation so fast pointer movement still paints continuous lines
+- Animated `Shake To Erase` reset with frame and knob reactions
+- `Replay Last Sketch` feature that redraws your latest piece
+- Keyboard shortcuts for faster play
 
-## Getting started
-1. Open `index.html` in your favourite browser.
-2. Click and drag over the grid to draw.
-3. Press **Change number of grids** to reset the board with a new size.
+## Controls
+- Draw: click or tap, then drag across the board
+- Grid size: use the slider and press `Build ... Grid`
+- Shuffle palette: press the button or use `R`
+- Clear board: press `Shake To Erase` or use `C`
+- Replay sketch: press `Replay Last Sketch` or use `P`
+- Change stroke mode: click a mode chip or use `1`, `2`, `3`, or `4`
 
-## Project structure
-- `index.html` – page markup and button
-- `style.css` – layout and grid styling
-- `script.js` – grid creation and drawing logic
+## Getting Started
+1. Open `index.html` in your browser.
+2. Choose a grid size and brush mode.
+3. Draw on the board with your mouse or touch input.
+4. Shuffle palettes, replay your sketch, or shake the board clean.
 
-No build step or server is required; everything runs in the browser.
+## Project Structure
+- `index.html` - page structure and controls
+- `style.css` - visual design, responsive layout, and animation styling
+- `script.js` - drawing logic, palettes, replay, and board interactions
+
+## Tech
+- HTML
+- CSS
+- Vanilla JavaScript
+
+No build step or server is required; everything runs directly in the browser.
